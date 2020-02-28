@@ -1,10 +1,24 @@
 <!doctype html>
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css' rel='stylesheet' />
 <html>
 	<head>
 		<title>Weather app</title>
-		<link href="css/weather-app.css" rel="stylesheet" type="text/css">
 	</head>
+
 	<div>
-		Number of points
+		<label for="npoints">Number of points:</label>
+		<input type="text" id="npoints" name="npoints"><br><br>
+		<button type="button">Submit</button>
 	</div>
+	<body>
+	<div id='map' style='width: 400px; height: 300px;'></div>
+		<script>
+		mapboxgl.accessToken = 'pk.eyJ1IjoiY2RoMTUyMiIsImEiOiJjazc1a20wN3EwMW1iM2xzdnBseGF1bnRqIn0.APoqflT-6_NMAU6UheTveg';
+		var map = new mapboxgl.Map({
+		container: 'map',
+		style: 'mapbox://styles/mapbox/streets-v9'
+		});
+		</script>
+	</body>
 </html>
